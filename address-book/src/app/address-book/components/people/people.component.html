@@ -1,1 +1,9 @@
 <p>people works!</p>
+
+<ul *ngIf="paginatedPeople$ | async as people">
+  <li *ngFor="let person of people.results">
+    {{person | json}}
+  </li>
+</ul>
+
+<app-people-details></app-people-details>
