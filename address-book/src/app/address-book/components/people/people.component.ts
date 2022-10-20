@@ -8,6 +8,9 @@ import { PeopleService } from '../../services/people.service';
   styleUrls: ['./people.component.scss']
 })
 export class PeopleComponent implements OnInit {
+  displayedColumns: string[] = [
+    'first name', 'gender', 'email', 'phone',
+  ];
 
   randomUser$ = this.peopleService.randomUser$;
   randomUserResults$ = this.randomUser$.pipe(
@@ -26,10 +29,10 @@ export class PeopleComponent implements OnInit {
       return randomUsers
     })
   );
+  constructor(private peopleService: PeopleService) { }
 
   paginatedPeople$ = this.peopleService.getPaginatedRandomUser();
 
-  constructor(private peopleService: PeopleService) { }
 
   ngOnInit(): void {
   }

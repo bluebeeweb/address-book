@@ -5,7 +5,14 @@ import { PeopleComponent } from './components/people/people.component';
 import { PeopleDetailsComponent } from './components/people/people-details/people-details.component';
 import { AddressBookRoutingModule } from './address-book-routing.module';
 
+// Material imports
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatTableModule } from '@angular/material/table';
 
+const MaterialModules = [
+  MatProgressSpinnerModule,
+  MatTableModule,
+];
 
 @NgModule({
   declarations: [
@@ -16,6 +23,7 @@ import { AddressBookRoutingModule } from './address-book-routing.module';
     CommonModule,
     HttpClientModule,
     AddressBookRoutingModule,
+    ...MaterialModules,
   ]
 })
 export class AddressBookModule { }
