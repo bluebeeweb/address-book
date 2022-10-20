@@ -26,10 +26,10 @@ export class PeopleComponent implements OnInit {
       return randomUsers
     })
   );
+  constructor(private peopleService: PeopleService) { }
 
   paginatedPeople$ = this.peopleService.getPaginatedRandomUser();
 
-  constructor(private peopleService: PeopleService) { }
 
   ngOnInit(): void {
   }
