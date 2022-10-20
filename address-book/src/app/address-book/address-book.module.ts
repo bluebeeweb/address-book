@@ -6,10 +6,12 @@ import { PeopleDetailsComponent } from './components/people/people-details/peopl
 import { AddressBookRoutingModule } from './address-book-routing.module';
 
 // Material imports
+import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatTableModule } from '@angular/material/table';
 
 const MaterialModules = [
+  MatPaginatorModule,
   MatProgressSpinnerModule,
   MatTableModule,
 ];
